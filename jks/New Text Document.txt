@@ -1,0 +1,3 @@
+pwd - fc1234
+alias - fc
+pwd - fc1234

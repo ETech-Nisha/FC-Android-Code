@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeDetail" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowAnimationStyle">@style/MyCustomActivityAnimation</item>
+        <item name="android:windowBackground">@mipmap/ap_bg</item>
+    </style>
+</resources>

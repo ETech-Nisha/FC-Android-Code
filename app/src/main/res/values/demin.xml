@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="text_size">@dimen/_13sdp</dimen>
+    <dimen name="all_size">@dimen/_13sdp</dimen>
+    <bool name="isTablet">false</bool>
+</resources>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ap_bg"
+    android:orientation="vertical"
+    tools:context=".manager.home.MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:src="@mipmap/home_logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/privacy"
+        android:layout_below="@+id/img">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_curr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_curr">
+
+                <TextView
+                    android:id="@+id/txt_curr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:fontFamily="@font/medium"
+                    android:text="Current Wallpaper"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/all_curr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:fontFamily="@font/medium"
+                    android:text="All"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txt_no_curr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_horizontal"
+                    android:text="No Current Wallpaper"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size" />
+
+                <androidx.cardview.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_curr_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_curr"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/img_curr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+
+                        android:scaleType="centerCrop"
+                        android:visibility="visible" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_curr">
+
+                <TextView
+                    android:id="@+id/txt_upc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/medium"
+                    android:text="Upcoming Wallpaper"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/all_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:fontFamily="@font/medium"
+                    android:text="All"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_upc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_curr"
+                android:layout_marginLeft="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txt_no_upc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_horizontal"
+                    android:text="No Upcoming Wallpaper"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size" />
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_up_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/img_upc_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_up_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_upc_one"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/img_upc_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_up_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_upc_two"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/img_pen_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_curr">
+
+                <TextView
+                    android:id="@+id/txt_pen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/medium"
+                    android:text="Previous Wallpaper"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/all_pen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:fontFamily="@font/medium"
+                    android:text="All"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_pen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_curr"
+                android:layout_marginLeft="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txt_no_pen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_horizontal"
+                    android:text="No Previous Wallpaper"
+                    android:textColor="@color/alltext"
+                    android:textSize="@dimen/all_size"
+                    android:visibility="visible" />
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_pen_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/img_pen_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/rectangle_border"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_pen_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_pen_one"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+
+                    <ImageView
+                        android:id="@+id/img_pen_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/privacy_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

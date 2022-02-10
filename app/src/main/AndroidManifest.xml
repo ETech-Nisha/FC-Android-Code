@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fractal.chaoss">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="com.AppApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeData"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!--<activity
+            android:name="com.fractal.chaoss.WebActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeHome">
+            <tools:validation testUrl="https://effectualtech.net/redirectGoogleoath2Result.php?code=" />
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="effectualtech.net"
+                    android:path="/redirectGoogleoath2Result.php" />
+            </intent-filter>
+
+        </activity>-->
+        <activity
+            android:name="com.fractal.chaoss.manager.home.PermissionAccept"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeHome"></activity>
+
+
+        <activity
+            android:name="com.fractal.chaoss.SplashActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeData">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.fractal.chaoss.manager.home.MainActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeHome"></activity>
+
+        <activity
+            android:name="com.fractal.chaoss.manager.detail.DetailActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeDetail" />
+        <activity
+            android:name="com.fractal.chaoss.manager.alldata.AllActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeHome" />
+
+        <service
+            android:name="com.fractal.chaoss.notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/home_logo" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="01" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+    </application>
+
+</manifest>

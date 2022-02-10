@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <integer-array name="contiguous_color">
+            <item>@color/text</item>
+            <item>@color/white</item>
+            <item>@color/red</item>
+        </integer-array>
+
+</resources>

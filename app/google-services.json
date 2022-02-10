@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "868722952990",
+    "project_id": "fractal-1db86",
+    "storage_bucket": "fractal-1db86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868722952990:android:19a2adc48ba22cccd7d70f",
+        "android_client_info": {
+          "package_name": "com.fractal.chaos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA41gObSgzVK5fwlsTEa_-2T3XrENGHnak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868722952990-gfkimjit3sv17721v4ahq0sisqkm87rm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868722952990:android:043c5bc882b8f9f3d7d70f",
+        "android_client_info": {
+          "package_name": "com.fractal.chaoss"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA41gObSgzVK5fwlsTEa_-2T3XrENGHnak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868722952990-gfkimjit3sv17721v4ahq0sisqkm87rm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
