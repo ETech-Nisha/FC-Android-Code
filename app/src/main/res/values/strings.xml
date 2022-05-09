@@ -5,6 +5,6 @@
     <string name="no_email">Please configure your play store account.</string>
     <string name="monthly_product">com.erin.opera.monthly</string>
     <string name="login_txt">loading...</string>
-    <string name="privacy"><![CDATA[<a href="https://docs.google.com/document/d/1oUBiUB0M8E4gA5VvRBiqr7dYuMNOWRzxL8-bl8_WOBU/edit">Privacy Policy</a>]]></string>
+    <string name="privacy"><![CDATA[<a href="https://app.fractalchaos.com/privacy-policy">Privacy Policy</a>]]></string>
     <string name="asset_statements" translatable="false">[{ \"include\": \"https://www.effectualtech.net/.well-known/assetlinks.json\" }]</string>
 </resources>

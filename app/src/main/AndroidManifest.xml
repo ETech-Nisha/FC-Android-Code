@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.fractal.chaoss">
+    package="com.fc.homescreen">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
@@ -33,11 +33,11 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <!--<activity
-            android:name="com.fractal.chaoss.WebActivity"
+        <activity
+            android:name="com.fc.homescreen.WebActivity"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeHome">
-            <tools:validation testUrl="https://effectualtech.net/redirectGoogleoath2Result.php?code=" />
+            <tools:validation testUrl="https://app.fractalchaos.com/redirectGoogleoath2Result.php?code=" />
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -46,19 +46,19 @@
 
                 <data
                     android:scheme="https"
-                    android:host="effectualtech.net"
+                    android:host="app.fractalchaos.com"
                     android:path="/redirectGoogleoath2Result.php" />
             </intent-filter>
 
-        </activity>-->
+        </activity>
         <activity
-            android:name="com.fractal.chaoss.manager.home.PermissionAccept"
+            android:name="com.fc.homescreen.manager.home.PermissionAccept"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeHome"></activity>
 
 
         <activity
-            android:name="com.fractal.chaoss.SplashActivity"
+            android:name="com.fc.homescreen.SplashActivity"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeData">
             <intent-filter>
@@ -69,21 +69,21 @@
         </activity>
 
         <activity
-            android:name="com.fractal.chaoss.manager.home.MainActivity"
+            android:name="com.fc.homescreen.manager.home.MainActivity"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeHome"></activity>
 
         <activity
-            android:name="com.fractal.chaoss.manager.detail.DetailActivity"
+            android:name="com.fc.homescreen.manager.detail.DetailActivity"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeDetail" />
         <activity
-            android:name="com.fractal.chaoss.manager.alldata.AllActivity"
+            android:name="com.fc.homescreen.manager.alldata.AllActivity"
             android:screenOrientation="locked"
             android:theme="@style/AppThemeHome" />
 
         <service
-            android:name="com.fractal.chaoss.notification.MyFirebaseMessagingService"
+            android:name="com.fc.homescreen.notification.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -106,6 +106,16 @@
         <meta-data
             android:name="firebase_analytics_collection_enabled"
             android:value="false" />
+
+        <service
+            android:name="com.OnceADay"
+            android:label="Service"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+
+
+        </service>
+
+
     </application>
 
 </manifest>

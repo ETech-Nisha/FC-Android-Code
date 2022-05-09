@@ -2,7 +2,6 @@ package com
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.android.billingclient.api.*
 
 
 class AppApplication : Application(){
@@ -13,9 +12,13 @@ class AppApplication : Application(){
 
     init {
         instance = this
+
     }
+
+
     companion object {
         private var instance: AppApplication? = null
+
         fun getInstance(): AppApplication? {
             return instance
         }
@@ -24,12 +27,11 @@ class AppApplication : Application(){
             return sharedPref
         }
         fun isTablet(): Boolean {
-            return instance!!.getResources().getBoolean(com.fractal.chaoss.R.bool.isTablet)
+            return instance!!.getResources().getBoolean(com.fc.homescreen.R.bool.isTablet)
         }
+
+
     }
-
-
-
 
 }
 
